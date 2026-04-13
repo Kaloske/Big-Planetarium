@@ -1,0 +1,352 @@
+* {
+    /* Removed default browser defaults here to make css easier. */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0F0F0F;
+}
+
+.content::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+    /* fallback color incase background image doesn't load. */
+    background-color: black;
+    background-image: url(../images/stars.jpg);
+    
+    width: 100%;
+    height: 100vh;
+    /* Filters make it easier to read text and such. */
+    filter: blur(5px) brightness(50%);
+    transform: scale(1.1);
+
+}
+
+
+.content {
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+/* Main content Wrapper */
+#wrapper {
+    width: 90%;
+    margin: 3rem auto;
+    padding-top: 3rem;
+    overflow: hidden;
+
+}
+
+header {
+    background: #414E69;
+    background: linear-gradient(90deg, rgba(65, 78, 105, 1) 0%, rgb(79, 98, 134) 100%);
+    border-bottom: 2px rgb(139, 157, 196) solid;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    gap: 1em;
+}
+
+.navbar li {
+    /* List item size should be based on the actual button size, so make it fit content. */
+    width: fit-content;
+
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 1rem;
+    /* 100% dimensions means it is the full size of the parent li element */
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+
+#currentPage {
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background-color: #32405a;
+}
+
+p {
+    color: white;
+    font-size: 1.25rem;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h3 {
+    color: white;
+    font-size: 1.75rem;
+    margin-bottom: 0.3rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.media-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.media-container video {
+    height: auto;
+    width: 100%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.fact-container {
+    background-color: #32405a4f;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.planet-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 1rem 1rem 0 1rem;
+    gap: 1rem;
+}
+
+.planet-grid-container a {
+    text-decoration: none;
+}
+
+.planet-group {
+    margin-bottom: 3rem;
+}
+
+.planet-group .planet-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.planet-child p {
+    margin: 0;
+}
+
+.planet-child img {
+    height: auto;
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.planet-child:hover {
+    background-color: rgba(149, 173, 216, 0.5);
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1rem;
+}
+
+ul li::marker {
+    color: rgb(255, 255, 255);
+}
+
+
+
+button {
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #95add8;
+}
+
+.btn-default {
+    background-color: #637aa5;
+}
+
+.btn-highlight {
+    background-color: #3279f3;
+}
+
+.text-container {
+    margin-bottom: 3rem;
+}
+
+
+@media screen and (min-width: 568px) {
+    .navbar a {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .btn-container {
+        margin-bottom: 2.5rem;
+    }
+
+
+
+    .planet-child img {
+        width: 180px;
+    }
+}
+
+@media screen and (min-width: 666px) {
+
+    /* At this size the nav bar aligns to the left with a margin, this is the desktop-like version, it also fills more horizontal space. */
+    .navbar ul {
+        justify-content: left;
+        margin-left: 2.5%;
+    }
+
+    .navbar a {
+        padding: 1rem;
+    }
+
+    .media-container img {
+        height: 90%;
+        width: 90%;
+    }
+
+    .planet-grid-container {
+        margin-top: 3rem;
+    }
+
+    .planet-child {
+        padding: 2;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    .media-container img {
+        height: 80%;
+        width: 80%;
+    }
+
+    .planet-child img {
+        width: 230px;
+    }
+
+    .btn-container button {
+        padding: 1rem;
+        min-width: 10rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #wrapper {
+        width: 80%;
+    }
+
+    .media-container img {
+        height: 70%;
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+
+    #wrapper {
+        width: 80%;
+    }
+
+    .navbar a {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    .media-container img {
+        height: 55%;
+        width: 55%;
+    }
+
+}
