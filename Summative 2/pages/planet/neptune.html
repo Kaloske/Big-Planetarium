@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neptune</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <ul class="main-nav-bar ">
+                    <li><a href="../../index.html" tabindex="0">Milky Way</a></li>
+                    <li>
+                        <div class="dropdown-menu">
+                            <button onclick="dropdown()" id="dropdown-btn">Explore ⌵</button>
+                            <div id="dropdown-content">
+                                <ul>
+                                    <li><a href="../solarsystem.html" tabindex="0">Solar System</a></li>
+                                    <li><a href="mercury.html" tabindex="0">Mercury</a></li>
+                                    <li><a href="venus.html" tabindex="0">Venus</a></li>
+                                    <li><a href="earth.html" tabindex="0">Earth</a></li>
+                                    <li><a href="mars.html" tabindex="0">Mars</a></li>
+                                    <li><a href="jupiter.html" tabindex="0">Jupiter</a></li>
+                                    <li><a href="saturn.html" tabindex="0">Saturn</a></li>
+                                    <li><a href="uranus.html" tabindex="0">Uranus</a></li>
+                                    <li><a href="neptune.html" tabindex="0" id="currentPage" [aria-current="page"
+                                            ]>Neptune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../about.html" tabindex="0">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main tag for semantics -->
+        <main>
+            <div id="wrapper">
+                <div class="grid-container">
+                    <div class="grid-text-container">
+                        <h1>Neptune</h1>
+                        <p>The deep blue planet is named after Neptune, the Roman god of the sea. The planet was found
+                            via
+                            mathematical prediction in 1846 by Johann Galle.</p>
+
+                        <p>Similar to Jupiter's "Great Red Spot", Neptune has its "Great Dark Spot", an Earth-sized anti-cyclone storm.</p>
+                    </div>
+
+                    <div class="grid-media-container">
+                        <h1>Pictures</h1>
+                        <div class="btn-container">
+                            <button class="btn-highlight" id="neptune-button1"
+                                onclick="img_swap(this, '../../assets/images/planet_space/neptune.png', 'neptune')">Space</button>
+                            <button class="btn-default" id="uranus-button2"
+                                onclick="img_swap(this, '../../assets/images/planet_surface/neptune_surface.jpg', 'neptune')">Surface</button>
+                        </div>
+                        <img src="../../assets//images/planet_space/neptune.png" alt="uranus" class="img-child"
+                            id="neptune">
+                    </div>
+                </div>
+
+                <div class="fact-container">
+                    <h2>Facts!</h2>
+                    <ul>
+                        <!-- p tag inside li for semantics, helps with accessibility -->
+                        <li>
+                            <p>Neptune's winds can reach over 2000km/h, making them the fastest winds in the solar
+                                system.</p>
+                        </li>
+                        <li>
+                            <p>Neptune takes 164.8 Earth years to orbin the Sun. It has only one orbit since its
+                                discovery in 1846.</p>
+                        </li>
+                        <li>
+                            <p>It is the furthest known planet orbiting the Sun, located over 4.5 billion km away.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/script.js" defer></script>
+</body>
+
+
+</html>

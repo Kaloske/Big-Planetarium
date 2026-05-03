@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <ul class="main-nav-bar ">
+                    <li><a href="../../index.html" tabindex="0">Milky Way</a></li>
+                    <li>
+                        <div class="dropdown-menu">
+                            <button onclick="dropdown()" id="dropdown-btn">Explore ⌵</button>
+                            <div id="dropdown-content">
+                                <ul>
+                                    <li><a href="../solarsystem.html" tabindex="0">Solar System</a></li>
+                                    <li><a href="mercury.html" tabindex="0">Mercury</a></li>
+                                    <li><a href="venus.html" tabindex="0">Venus</a></li>
+                                    <li><a href="earth.html" tabindex="0" id="currentPage" [aria-current="page"
+                                            ]>Earth</a></li>
+                                    <li><a href="mars.html" tabindex="0">Mars</a></li>
+                                    <li><a href="jupiter.html" tabindex="0">Jupiter</a></li>
+                                    <li><a href="saturn.html" tabindex="0">Saturn</a></li>
+                                    <li><a href="uranus.html" tabindex="0">Uranus</a></li>
+                                    <li><a href="neptune.html" tabindex="0">Neptune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../about.html" tabindex="0">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main tag for semantics -->
+        <main>
+            <div id="wrapper">
+                <div class="grid-container">
+                    <div class="grid-text-container">
+                        <h1>Earth</h1>
+                        <p>Our Home planet, currently the only planet known to possess biological life. Life is possible
+                            on
+                            our
+                            home plant thanks to the presence of water and oxygen.
+                        </p>
+                        <p>Earth is fortunate enough to be in the "goldilocks" zone,
+                            neither
+                            too
+                            hot nor too cold for liquid water to exist. In fact, this is one characteristic that scientists look for when identifying planets that may potentially harbor life!</p>
+
+                    </div>
+
+                    <div class="grid-media-container">
+                        <h1>Pictures</h1>
+                        <div class="btn-container">
+                            <button class="btn-highlight" id="earth-button1"
+                                onclick="img_swap(this, '../../assets/images/planet_space/Earth.webp', 'earth')">Space</button>
+                            <button class="btn-default" id="earth-button2"
+                                onclick="img_swap(this, '../../assets/images/planet_surface/earth_surface.jpg', 'earth')">Surface</button>
+                            <button class="btn-default" id="earth-button3"
+                                onclick="img_swap(this, '../../assets/images/misc/pale_dot.png', 'earth')">From
+                                Saturn</button>
+                        </div>
+                        <img src="../../assets/images/planet_space/Earth.webp" alt="earth" class="img-child" id="earth">
+                    </div>
+                </div>
+
+                <div class="fact-container">
+                    <h2>Facts!</h2>
+                    <ul>
+                        <!-- p tag inside li for semantics, helps with accessibility -->
+                        <li>
+                            <p>Antarctica is technically a desert, as it is one of the driest places on Earth.</p>
+                        </li>
+                        <li>
+                            <p>Earth is the only planet in the solar system with active plate tectonics.</p>
+                        </li>
+                        <li>
+                            <p>Earth's orbit around the sun takes approximately 365.25 days. This why a leap year is
+                                needed
+                                every four years.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/script.js" defer></script>
+</body>
+
+
+</html>

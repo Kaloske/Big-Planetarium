@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturn</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <ul class="main-nav-bar ">
+                    <li><a href="../../index.html" tabindex="0">Milky Way</a></li>
+                    <li>
+                        <div class="dropdown-menu">
+                            <button onclick="dropdown()" id="dropdown-btn">Explore ⌵</button>
+                            <div id="dropdown-content">
+                                <ul>
+                                    <li><a href="../solarsystem.html" tabindex="0">Solar System</a></li>
+                                    <li><a href="mercury.html" tabindex="0">Mercury</a></li>
+                                    <li><a href="venus.html" tabindex="0">Venus</a></li>
+                                    <li><a href="earth.html" tabindex="0">Earth</a></li>
+                                    <li><a href="mars.html" tabindex="0">Mars</a></li>
+                                    <li><a href="jupiter.html" tabindex="0">Jupiter</a></li>
+                                    <li><a href="saturn.html" tabindex="0" id="currentPage" [aria-current="page"
+                                            ]>Saturn</a></li>
+                                    <li><a href="uranus.html" tabindex="0">Uranus</a></li>
+                                    <li><a href="neptune.html" tabindex="0">Neptune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../about.html" tabindex="0">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main tag for semantics -->
+        <main>
+            <div id="wrapper">
+                <div class="grid-container">
+                    <div class="grid-text-container">
+                        <h1>Saturn</h1>
+                        <p>The Second Largest planet in our solar system is named after the Roman God of agriculture,
+                            wealth
+                            and
+                            time. Saturn is famous for its distinct ring system, which consists of 7 distinct ringlets.
+                        </p>
+                        <p>
+                            Saturn's many moons are a a point of interest for scientists, particularly Enceladus, a small icy moon with key ingredients for life, liquid water, essential organic chemistry, and active energy sources.
+                        </p>
+                    </div>
+
+                    <div class="grid-media-container">
+                        <h1>Pictures</h1>
+                        <div class="btn-container">
+                            <button class="btn-highlight" id="saturn-button1"
+                                onclick="img_swap(this, '../../assets/images/planet_space/saturn.png', 'saturn')">Space</button>
+                            <button class="btn-default" id="saturn_button2"
+                                onclick="img_swap(this, '../../assets/images/planet_surface/saturn_surface.jpg', 'saturn')">Surface</button>
+                            <button class="btn-default" id="saturn_button3"
+                                onclick="img_swap(this, '../../assets/images/misc/cassini.jpg', 'saturn')">Cassini-Huygens</button>
+                        </div>
+                        <img src="../../assets/images/planet_space/saturn.png" alt="saturn" class="img-child"
+                            id="saturn">
+                    </div>
+                </div>
+
+                <div class="fact-container">
+                    <h2>Facts!</h2>
+                    <ul>
+                        <!-- p tag inside li for semantics, helps with accessibility -->
+                        <li>
+                            <p>The rings are perhaps only 100 million years old, making it much younger than Saturn
+                                itself.</p>
+                        </li>
+                        <li>
+                            <p>The rings are labelled A-G, with A, B, and C being the brightest and closest to the
+                                planet.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Saturn has 285 known moons.</p>
+                        </li>
+                        <li>
+                            <p>Various probes have visited Saturn. One of them, Cassini-Huygens consisted of the Cassini
+                                orbiter and Huygens probe (Which landed on Titan, one of Saturn's moons).</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/script.js" defer></script>
+</body>
+
+
+</html>

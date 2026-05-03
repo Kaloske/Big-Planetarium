@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercury</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <ul class="main-nav-bar ">
+                    <li><a href="../../index.html" tabindex="0">Milky Way</a></li>
+                    <li>
+                        <div class="dropdown-menu">
+                            <button onclick="dropdown()" id="dropdown-btn">Explore ⌵</button>
+                            <div id="dropdown-content">
+                                <ul>
+                                    <li><a href="../solarsystem.html" tabindex="0">Solar System</a></li>
+                                    <li><a href="mercury.html" id="currentPage" [aria-current="page" ]
+                                            tabindex="0">Mercury</a></li>
+                                    <li><a href="venus.html" tabindex="0">Venus</a></li>
+                                    <li><a href="earth.html" tabindex="0">Earth</a></li>
+                                    <li><a href="mars.html" tabindex="0">Mars</a></li>
+                                    <li><a href="jupiter.html" tabindex="0">Jupiter</a></li>
+                                    <li><a href="saturn.html" tabindex="0">Saturn</a></li>
+                                    <li><a href="uranus.html" tabindex="0">Uranus</a></li>
+                                    <li><a href="neptune.html" tabindex="0">Neptune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../about.html" tabindex="0">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main tag for semantics -->
+        <main>
+            <div id="wrapper">
+                <div class="grid-container">
+                    <div class="grid-text-container">
+                        <h1>Mercury</h1>
+                        <p>Mercury, named after the Roman messenger god, is the smallest planet in our solar system. It
+                            is
+                            the
+                            closest planet to the sun, orbiting the sun every 88 Earth days.</p>
+
+                        <p>Interestingly, because of the nature of its orbit, it is on average the closest planet to
+                            every other planet in the solar system on average over time.</p>
+                    </div>
+
+                    <div class="grid-media-container">
+                        <h1>Pictures</h1>
+                        <div class="btn-container">
+                            <button class="btn-highlight" id="mercury-button1"
+                                onclick="img_swap(this, '../../assets/images/planet_space/mercury.png', 'mercury')">Space</button>
+                            <button class="btn-default" id="mercury-button2"
+                                onclick="img_swap(this, '../../assets/images/planet_surface/mercury_surface.jpg', 'mercury')">Surface</button>
+                        </div>
+                        <img src="../../assets/images/planet_space/mercury.png" alt="mercury" class="img-child"
+                            id="mercury">
+                    </div>
+                </div>
+
+                <div class="fact-container">
+                    <h2>Facts!</h2>
+                    <ul>
+                        <!-- p tag inside li for semantics, helps with accessibility -->
+                        <li>
+                            <p>It is the Smallest Planet.</p>
+                        </li>
+                        <li>
+                            <p>One year is 88 Earth Days.</p>
+                        </li>
+                        <li>
+                            <p>The side facing the sun is around 430°C, with the side facing away being around -180°C.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/script.js" defer></script>
+</body>
+
+
+</html>

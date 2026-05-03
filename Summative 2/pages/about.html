@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturn</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <ul class="main-nav-bar ">
+                    <li><a href="../index.html" tabindex="0">Milky Way</a></li>
+                    <li>
+                        <div class="dropdown-menu">
+                            <!-- <a href="solarsystem.html" tabindex="0">Our Solar System</a> -->
+                            <button onclick="dropdown()" id="dropdown-btn">Explore ⌵</button>
+                            <div id="dropdown-content">
+                                <ul>
+                                    <li><a href="solarsystem.html" tabindex="0">Solar System</a></li>
+                                    <li><a href="planet/mercury.html" tabindex="0">Mercury</a></li>
+                                    <li><a href="planet/venus.html" tabindex="0">Venus</a></li>
+                                    <li><a href="planet/earth.html" tabindex="0">Earth</a></li>
+                                    <li><a href="planet/mars.html" tabindex="0">Mars</a></li>
+                                    <li><a href="planet/jupiter.html" tabindex="0">Jupiter</a></li>
+                                    <li><a href="planet/saturn.html" tabindex="0">Saturn</a></li>
+                                    <li><a href="planet/uranus.html" tabindex="0">Uranus</a></li>
+                                    <li><a href="planet/neptune.html" tabindex="0">Neptune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="about.html" [aria-current="page"] tabindex="0" id="currentPage">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main tag for semandtics -->
+        <main>
+            <div id="wrapper">
+                <div class="text-container">
+                    <h1>About Us</h1>
+                    <p>Big Planetarium is a Bristol-based educational organization offering educational entertainment
+                        for the public and for schools. This website was created to provide information about Space in a
+                        fun and accessible way.</p>
+
+                    <h1>Navigation</h1>
+                    <p>Clickable links or buttons will be highlighted when hovered over. You may also navigate using the
+                        tab key on your keyboard.</p>
+                </div>
+
+            </div>
+    </div>
+    </main>
+    <script src="../assets/js/script.js" defer></script>
+</body>
+
+
+</html>

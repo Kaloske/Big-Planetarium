@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uranus</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <ul class="main-nav-bar ">
+                    <li><a href="../../index.html" tabindex="0">Milky Way</a></li>
+                    <li>
+                        <div class="dropdown-menu">
+                            <button onclick="dropdown()" id="dropdown-btn">Explore ⌵</button>
+                            <div id="dropdown-content">
+                                <ul>
+                                    <li><a href="../solarsystem.html" tabindex="0">Solar System</a></li>
+                                    <li><a href="mercury.html" tabindex="0">Mercury</a></li>
+                                    <li><a href="venus.html" tabindex="0">Venus</a></li>
+                                    <li><a href="earth.html" tabindex="0">Earth</a></li>
+                                    <li><a href="mars.html" tabindex="0">Mars</a></li>
+                                    <li><a href="jupiter.html" tabindex="0">Jupiter</a></li>
+                                    <li><a href="saturn.html" tabindex="0">Saturn</a></li>
+                                    <li><a href="uranus.html" tabindex="0" id="currentPage" [aria-current="page"
+                                            ]>Uranus</a></li>
+                                    <li><a href="neptune.html" tabindex="0">Neptune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../about.html" tabindex="0">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main tag for semantics -->
+        <main>
+            <div id="wrapper">
+                <div class="grid-container">
+                    <div class="grid-text-container">
+                        <h1>Uranus</h1>
+                        <p>Uranus, named after a Greek deity, is an ice giant with an extreme 98-degree axial tilt. It
+                            is
+                            composed of water, methane and ammonia, giving it its distinct blue-green color.</p>
+                        <p>The only spacecraft to visit Uranus was NASA's Voyager 2, which performed a flyby in 1986, capturing images of the planet.</p>
+                    </div>
+
+                    <div class="grid-media-container">
+                        <h1>Pictures</h1>
+                        <div class="btn-container">
+                            <button class="btn-highlight" id="uranus-button1"
+                                onclick="img_swap(this, '../../assets/images/planet_space/uranus.png', 'uranus')">Space</button>
+                            <button class="btn-default" id="uranus-button2"
+                                onclick="img_swap(this, '../../assets/images/planet_surface/uranus_surface.jpg', 'uranus')">Surface</button>
+                        </div>
+                        <img src="../../assets/images/planet_space/uranus.png" alt="uranus" class="img-child"
+                            id="uranus">
+                    </div>
+                </div>
+
+                <div class="fact-container">
+                    <h2>Facts!</h2>
+                    <ul>
+                        <!-- p tag inside li for semantics, helps with accessibility -->
+                        <li>
+                            <p>Unlike the other planets, Uranus is not named after a Roman God. It is named after Greek
+                                Οὐρανός, the primordial god of the "sky".</p>
+                        </li>
+                        <li>
+                            <p>The planet's atmosphere can reach -225°C making it the coldest planet in our solar
+                                system.</p>
+                        </li>
+                        <li>
+                            <p>While less famous as Saturn's ring system, Uranus has 13 faint rings.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/script.js" defer></script>
+</body>
+
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="../assets/css/style.css"">
+</head>
+
+<body>
+    <div class=" content">
+    <header>
+        <nav class="navbar">
+            <ul class="main-nav-bar ">
+                <li><a href="../index.html" tabindex="0">Milky Way</a></li>
+                <li>
+                    <div class="dropdown-menu">
+                        <!-- <a href="solarsystem.html" tabindex="0">Our Solar System</a> -->
+                        <button onclick="dropdown()" id="dropdown-btn">Explore ⌵</button>
+                        <div id="dropdown-content">
+                            <ul>
+                                <li><a href="solarsystem.html" tabindex="0" [aria-current="page" ]
+                                        id="currentPage">Solar System</a></li>
+                                <li><a href="planet/mercury.html" tabindex="0">Mercury</a></li>
+                                <li><a href="planet/venus.html" tabindex="0">Venus</a></li>
+                                <li><a href="planet/earth.html" tabindex="0">Earth</a></li>
+                                <li><a href="planet/mars.html" tabindex="0">Mars</a></li>
+                                <li><a href="planet/jupiter.html" tabindex="0">Jupiter</a></li>
+                                <li><a href="planet/saturn.html" tabindex="0">Saturn</a></li>
+                                <li><a href="planet/uranus.html" tabindex="0">Uranus</a></li>
+                                <li><a href="planet/neptune.html" tabindex="0">Neptune</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="about.html" tabindex="0">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main tag for semantics -->
+    <main>
+        <div id="wrapper">
+            <div class="text-container">
+                <h1>Our Solar System</h1>
+                <p>Our sun, as do all bodies with sufficient mass, attracts objects to itself via its gravitational
+                    field. Eight planets orbit the sun which are separated into two groups, the inner and outer
+                    planets.
+                </p>
+            </div>
+
+            <div class="media-container">
+                <video src="../assets/videos/SolarSystemOverview.mp4" autoplay loop>video tag</video>
+            </div>
+
+            <div class="planet-introduction">
+                <h1>Select one of the planets!</h1>
+            </div>
+            <div class="planet-group">
+                <h2>Inner Planets</h2>
+                <p>The inner planets are denser terrestrial bodies closer to the sun. The Asteroid belt lies beyond
+                    Mars, separating the inner and outer planets.</p>
+                <div class="planet-grid-container">
+                    <a href="planet/mercury.html" tabindex="0">
+                        <div class="planet-child">
+                            <img src="../assets/images/planet_space/mercury.png" alt="mercury">
+                            <h3>Mercury</h3>
+                        </div>
+                    </a>
+
+                    <a href="planet/venus.html" tabindex="0">
+                        <div class="planet-child">
+                            <img src="../assets/images/planet_space/venus.png" alt="venus">
+                            <h3>Venus</h3>
+                        </div>
+                    </a>
+
+                    <a href="planet/earth.html" tabindex="0">
+                        <div class="planet-child">
+                            <img src="../assets/images/planet_space/Earth.webp" alt="earth">
+                            <h3>Earth</h3>
+                        </div>
+                    </a>
+
+                    <a href="planet/mars.html" tabindex="0">
+                        <div class="planet-child">
+                            <img src="../assets/images/planet_space/mars.png" alt="mars">
+                            <h3>Mars</h3>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="planet-group">
+                <h2>Outer Planets</h2>
+                <p>These planets are located beyond the asteroid belt. The Outer planets are significantly larger
+                    than
+                    the inner planets, having no solid surface and possessing multiple moons.</p>
+                <div class="planet-grid-container">
+                    <a href="planet/jupiter.html" tabindex="0">
+                        <div class="planet-child">
+                            <img src="../assets/images/planet_space/jupiter.png" alt="jupiter">
+                            <h3>Jupiter</h3>
+                        </div>
+                    </a>
+
+                    <a href="planet/saturn.html" tabindex="0">
+                        <div class="planet-child">
+                            <img src="../assets/images/planet_space/saturn.png" alt="saturn">
+                            <h3>Saturn</h3>
+                        </div>
+                    </a>
+
+                    <a href="planet/uranus.html" tabindex="0">
+                        <div class="planet-child">
+                            <img src="../assets/images/planet_space/uranus.png" alt="uranus">
+                            <h3>Uranus</h3>
+                        </div>
+                    </a>
+
+                    <a href="planet/neptune.html" tabindex="0">
+                        <div class="planet-child">
+                            <img src="../assets/images/planet_space/neptune.png" alt="neptune">
+                            <h3>Neptune</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+    <script src="../assets/js/script.js" defer></script>
+    </body>
+
+
+</html>

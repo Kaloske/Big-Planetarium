@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <ul class="main-nav-bar ">
+                    <li><a href="../../index.html" tabindex="0">Milky Way</a></li>
+                    <li>
+                        <div class="dropdown-menu">
+                            <button onclick="dropdown()" id="dropdown-btn">Explore ⌵</button>
+                            <div id="dropdown-content">
+                                <ul>
+                                    <li><a href="../solarsystem.html" tabindex="0">Solar System</a></li>
+                                    <li><a href="mercury.html" tabindex="0">Mercury</a></li>
+                                    <li><a href="venus.html" tabindex="0">Venus</a></li>
+                                    <li><a href="earth.html" tabindex="0">Earth</a></li>
+                                    <li><a href="mars.html" tabindex="0" id="currentPage" [aria-current="page"
+                                            ]>Mars</a></li>
+                                    <li><a href="jupiter.html" tabindex="0">Jupiter</a></li>
+                                    <li><a href="saturn.html" tabindex="0">Saturn</a></li>
+                                    <li><a href="uranus.html" tabindex="0">Uranus</a></li>
+                                    <li><a href="neptune.html" tabindex="0">Neptune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../about.html" tabindex="0">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Main tag for semantics -->
+        <main>
+            <div id="wrapper">
+                <div class="grid-container">
+                    <div class="grid-text-container">
+                        <h1>Mars</h1>
+                        <p>The Red planet's distinct color reminded ancient cultures of blood and fire. For this reason,
+                            the
+                            Romans named the planet after Mars, the Roman God of War.</p>
+                        <P>Mars has been a target of numerous unmanned rover and probe missions. No doubt influenced by
+                            the planet having relatively
+                            close day-night cycle, resources like water ice, and evidence of past water.
+                        </P>
+                    </div>
+
+                    <div class="grid-media-container">
+                        <h1>Pictures</h1>
+                        <div class="btn-container">
+                            <button class="btn-highlight" id="mars-button1"
+                                onclick="img_swap(this, '../../assets/images/planet_space/mars.png', 'mars')">Space</button>
+                            <button class="btn-default" id="mars-button2"
+                                onclick="img_swap(this, '../../assets/images/planet_surface/mars_surface.webp', 'mars')">Surface</button>
+                        </div>
+                        <img src="../../assets/images/planet_space/mars.png" alt="mars" class="img-child" id="mars">
+                    </div>
+                </div>
+
+                <div class="fact-container">
+                    <h2>Facts!</h2>
+                    <ul>
+                        <!-- p tag inside li for semantics, helps with accessibility -->
+                        <li>
+                            <p>Its red and orange color comes from the presence of iron oxide.</p>
+                        </li>
+                        <li>
+                            <p>Mars is roughly half the diameter of Earth</p>
+                        </li>
+                        <li>
+                            <p>Olympus Mons on Mars is the tallest mountain in the solar system. For reference, it is
+                                three times taller than
+                                Mount
+                                Everest. A fitting fact for a mountain bearing the name of the home of the Greek Gods.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/script.js" defer></script>
+</body>
+
+
+</html>

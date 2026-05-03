@@ -22,7 +22,7 @@ body {
     /* fallback color incase background image doesn't load. */
     background-color: black;
     background-image: url(../images/stars.jpg);
-    
+
     width: 100%;
     height: 100vh;
     /* Filters make it easier to read text and such. */
@@ -50,9 +50,10 @@ body {
 }
 
 header {
-    background: #414E69;
-    background: linear-gradient(90deg, rgba(65, 78, 105, 1) 0%, rgb(79, 98, 134) 100%);
-    border-bottom: 2px rgb(139, 157, 196) solid;
+    background: #273042;
+    /* background: linear-gradient(90deg, rgba(65, 78, 105, 1) 0%, rgb(79, 98, 134) 100%);
+     */
+    border-bottom: 2px rgb(69, 78, 97) solid;
     position: fixed;
     left: 0;
     width: 100%;
@@ -76,11 +77,11 @@ header {
 
 }
 
-.navbar a {
+a {
     font-size: 1rem;
     padding: 1rem;
     /* 100% dimensions means it is the full size of the parent li element */
-    width: 100%;
+    /* min-width: 12rem; */
     height: 100%;
     display: block;
     color: white;
@@ -90,13 +91,66 @@ header {
 
 }
 
+.navbar a:hover {
+    background-color: #32405a;
+}
+
+#dropdown-btn {
+    font-size: 1rem;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#dropdown-btn:hover {
+    background-color: #32405a;
+}
+
+.dropdown-menu {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* .dropdown-menu:hover .dropdown-content {
+    display: block;
+} */
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #344e7c;
+    border-top: 2px rgb(69, 78, 97) solid;
+}
+
+#dropdown-content ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+#dropdown-content a:hover {
+    background-color: #4c6081;
+}
+
+#dropdown-content li {
+    width: 100%;
+}
+
+
 #currentPage {
     font-weight: bold;
 }
 
-.navbar a:hover {
-    background-color: #32405a;
-}
 
 p {
     color: white;
@@ -126,22 +180,50 @@ h3 {
     text-shadow: 2px 2px 4px #000000;
 }
 
-.media-container {
+.grid-media-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    background-color: #32405a4f;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+
 }
 
-.media-container img {
-    height: 100%;
-    width: 100%;
+
+.grid-media-container img {
+    height: auto;
+    width: 300px
+}
+
+.grid-media-container img {
+    height: auto;
+    width: 300px
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-bottom: 2rem;
+    gap: 2rem;
 }
 
 .media-container video {
     height: auto;
     width: 100%;
+}
+
+.text-container {
+    padding: 2rem;
+}
+
+.grid-text-container {
+    background-color: #32405a4f;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
 }
 
 .btn-container {
@@ -151,6 +233,28 @@ h3 {
     margin-bottom: 1rem;
 }
 
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 8rem;
+    text-align: center;
+
+}
+
+.planet-introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+    text-align: center;
+
+}
+
+
 .fact-container {
     background-color: #32405a4f;
     border-radius: 0.5rem;
@@ -159,7 +263,10 @@ h3 {
 
 .planet-grid-container {
     display: grid;
-    grid-template-columns: auto auto;
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+    padding-block: 2rem;
+
     margin: 1rem 1rem 0 1rem;
     gap: 1rem;
 }
@@ -172,11 +279,12 @@ h3 {
     margin-bottom: 3rem;
 }
 
-.planet-group .planet-child {
+.planet-child {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    transition: transform 0.1s ease-in-out;
 }
 
 .planet-child p {
@@ -190,7 +298,10 @@ h3 {
 }
 
 .planet-child:hover {
-    background-color: rgba(149, 173, 216, 0.5);
+
+    transform: scale(1.1);
+    background-color: #32405a4f;
+    border-radius: 1rem;
 }
 
 ul {
@@ -227,14 +338,21 @@ button:hover {
 }
 
 .text-container {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
-
 
 @media screen and (min-width: 568px) {
     .navbar a {
         font-size: 1.5rem;
         text-align: left;
+    }
+
+    #dropdown-btn {
+        min-width: 12rem;
+    }
+
+    #dropdown-btn {
+        font-size: 1.5rem;
     }
 
     p {
@@ -249,6 +367,18 @@ button:hover {
         margin-bottom: 2.5rem;
     }
 
+    .grid-media-container img {
+        height: 90%;
+        width: 90%;
+    }
+
+
+
+    .planet-grid-container {
+        grid-template-columns: 40% 40%;
+        gap: 4rem;
+    }
+
 
 
     .planet-child img {
@@ -259,7 +389,7 @@ button:hover {
 @media screen and (min-width: 666px) {
 
     /* At this size the nav bar aligns to the left with a margin, this is the desktop-like version, it also fills more horizontal space. */
-    .navbar ul {
+    .navbar .main-nav-bar {
         justify-content: left;
         margin-left: 2.5%;
     }
@@ -268,10 +398,6 @@ button:hover {
         padding: 1rem;
     }
 
-    .media-container img {
-        height: 90%;
-        width: 90%;
-    }
 
     .planet-grid-container {
         margin-top: 3rem;
@@ -280,6 +406,8 @@ button:hover {
     .planet-child {
         padding: 2;
     }
+
+
 
     button {
         font-size: 1.5rem;
@@ -294,11 +422,6 @@ button:hover {
         font-size: 4.5rem;
     }
 
-    .media-container img {
-        height: 80%;
-        width: 80%;
-    }
-
     .planet-child img {
         width: 230px;
     }
@@ -307,6 +430,15 @@ button:hover {
         padding: 1rem;
         min-width: 10rem;
     }
+
+    #dropdown-content a {
+        font-size: 1.5rem;
+    }
+
+    .navbar a {
+        min-width: 10rem;
+    }
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -315,7 +447,7 @@ button:hover {
         width: 80%;
     }
 
-    .media-container img {
+    .grid-media-container img {
         height: 70%;
         width: 70%;
     }
@@ -325,10 +457,15 @@ button:hover {
 @media screen and (min-width: 1300px) {
 
     #wrapper {
-        width: 80%;
+        width: 70%;
     }
 
     .navbar a {
+        font-size: 2rem;
+        min-width: 12rem;
+    }
+
+    #dropdown-btn {
         font-size: 2rem;
     }
 
@@ -344,9 +481,31 @@ button:hover {
         font-size: 2rem;
     }
 
-    .media-container img {
-        height: 55%;
-        width: 55%;
+    .grid-text-container {
+        margin-bottom: 0;
+    }
+
+    .grid-media-container {
+        margin-bottom: 0;
+    }
+
+    .grid-media-container img {
+        height: auto;
+        width: 100%;
+
+    }
+
+    #milky-container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 0;
+        gap: 2rem;
+
     }
 
 }

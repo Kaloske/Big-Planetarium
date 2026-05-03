@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milkyway</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <nav class="navbar">
+                <ul class="main-nav-bar ">
+                    <li><a href="index.html" tabindex="0" [aria-current="page" ] id="currentPage">Milky Way</a></li>
+                    <li>
+                        <div class="dropdown-menu">
+                            <button onclick="dropdown()" id="dropdown-btn">Explore ⌵</button>
+                            <div id="dropdown-content">
+                                <ul>
+                                    <li><a href="pages/solarsystem.html" tabindex="0">Solar System</a></li>
+                                    <li><a href="pages/planet/mercury.html" tabindex="0">Mercury</a></li>
+                                    <li><a href="pages/planet/venus.html" tabindex="0">Venus</a></li>
+                                    <li><a href="pages/planet/earth.html" tabindex="0">Earth</a></li>
+                                    <li><a href="pages/planet/mars.html" tabindex="0">Mars</a></li>
+                                    <li><a href="pages/planet/jupiter.html" tabindex="0">Jupiter</a></li>
+                                    <li><a href="pages/planet/saturn.html" tabindex="0">Saturn</a></li>
+                                    <li><a href="pages/planet/uranus.html" tabindex="0">Uranus</a></li>
+                                    <li><a href="pages/planet/neptune.html" tabindex="0">Neptune</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="pages/about.html" tabindex="0">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main tag for semantics -->
+        <main>
+            <div id="wrapper">
+
+                <div class="introduction">
+                    <h1>Ready to explore?</h1>
+                    <p>Lets look at our galaxy!</p>
+                </div>
+
+
+
+
+                <div class="grid-container">
+                    <div class="grid-text-container" id="">
+                        <h1>The Milky Way Galaxy</h1>
+                        <p>Our planet Earth, home to billions of years of biological history is but a single planet in
+                            our
+                            Milky
+                            Way galaxy. Its name describes its appearance when viewed from earth, a milky like swirl.
+                        </p>
+                        <p>Our galaxy consists of planets, stars, nebulas and gasses. It
+                            spans more than 100,000 light-years and contains 100-400 billion stars.</p>
+                    </div>
+
+                    <div class="grid-media-container">
+                        <h1>Pictures</h1>
+                        <div class="btn-container">
+                            <button class="btn-highlight" id="milky-button1"
+                                onclick="img_swap(this, 'assets/images/milkyway.jpg', 'milkyway')">From Space</button>
+                            <button class="btn-default" id="milky-button2"
+                                onclick="img_swap(this, 'assets/images/milkyway_earth.jpg', 'milkyway')">From
+                                Earth</button>
+                        </div>
+                        <img src="assets/images/milkyway.jpg" alt="Milkyway Space" class="img-child" id="milkyway">
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="assets/js/script.js" defer></script>
+</body>
+
+
+</html>
